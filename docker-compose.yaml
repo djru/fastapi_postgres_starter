@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    ports: 
+      - "8080:8080"
+    env_file: "./local.env"
+    volumes:
+      - ./:/app
+  redis:
+    image: "redis:alpine"
+  db:
+    image: "postgres:16-alpine"
+    restart: always
+    ports:
+    - 5432:5432
+    env_file: "./local.env"
+    volumes:
+    - pgdata:/var/lib/postgresql/data 
+volumes:
+  pgdata:
