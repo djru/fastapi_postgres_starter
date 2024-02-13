@@ -1,6 +1,6 @@
 # FastAPI+Postgres Starter
 
-## building the project
+## Building the project
 The project runs using docker-compose and mounts the codebase in a volume inside the container. This allows for live reloading using uvicorn --reload.
 
 ## To get started:
@@ -16,7 +16,7 @@ POSTGRES_DB=development
 ```
 
 To get started with a sample database, you can use the [northwind traders dataset](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/northwind-install), a popular test/demo database published by microsoft. Once the app is up, run:
-`./seed_local_db`
+```./seed_local_db```
 
 
 ## Project structure
